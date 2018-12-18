@@ -22,7 +22,7 @@ class ApplicationController < Sinatra::Base
     #  article.update(id: index)
    # end
     @articles = Article.all
-    redirect 'articles/:id'
+    redirect 'articles/#{@article.id}'
   end 
   
   get '/articles' do 
