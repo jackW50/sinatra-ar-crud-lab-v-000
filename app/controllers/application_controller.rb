@@ -56,6 +56,6 @@ class ApplicationController < Sinatra::Base
       article.update(id: index)
     end 
     @articles = Article.all
-    erb :index
+    redirect '/articles/index'
   end 
 end
