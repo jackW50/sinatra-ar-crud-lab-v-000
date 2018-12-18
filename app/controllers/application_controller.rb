@@ -23,7 +23,7 @@ class ApplicationController < Sinatra::Base
    # end
     @articles = Article.all
     
-    redirect 'articles/#{Article.all.last}'
+    redirect 'articles/#{Article.all.last.id}'
   end 
   
   get '/articles' do 
