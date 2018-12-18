@@ -23,7 +23,7 @@ class ApplicationController < Sinatra::Base
    # end
     @articles = Article.all
     binding.pry
-    redirect 'articles/:id'
+    redirect '/articles/#{@article.id}'
   end 
   
   get '/articles' do 
