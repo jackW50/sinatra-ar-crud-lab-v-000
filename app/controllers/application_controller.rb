@@ -18,9 +18,9 @@ class ApplicationController < Sinatra::Base
   
   post '/articles' do 
     @article = Article.create(params)
-    #Article.all.each.with_index(1) do |article, index|
-    #  article.update(id: index)
-   # end
+    Article.all.each.with_index(1) do |article, index|
+      article.update(id: index)
+    end
     @articles = Article.all
     
     redirect "/articles/#{@article.id}"
