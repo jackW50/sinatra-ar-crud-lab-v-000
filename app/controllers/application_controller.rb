@@ -46,7 +46,7 @@ class ApplicationController < Sinatra::Base
     article.update(title: params[:title]) unless params[:title].empty?
     article.update(content: params[:content]) unless params[:content].empty?
     @article = article
-    redirect '/articles/#{@article.id}'
+    redirect "/articles/#{@article.id}"
   end 
   
   delete '/articles/:id' do 
