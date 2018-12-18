@@ -52,9 +52,9 @@ class ApplicationController < Sinatra::Base
   delete '/articles/:id' do 
     article = Article.find(params[:id])
     article.destroy
-    #Article.all.each.with_index(1) do |value, index|
-    #  article.update(id: index)
-   # end 
+    Article.all.each.with_index(1) do |value, index|
+      article.update(id: index)
+    end 
     @articles = Article.all
     erb :index
   end 
